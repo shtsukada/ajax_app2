@@ -5,12 +5,12 @@
 <% end %>
 
 <% @posts.each do |post| %>
-<div class="post">
-  <div class="post-date">
-    投稿日時：<%= l post.created_at %>
+  <div class="post" data-id =<%= post.id %> data-check=<%= post.checked %>>
+    <div class="post-date">
+      投稿日時：<%= l post.created_at %>
+    </div>
+    <div class="post-content">
+      <%= post.contents %>
+    </div>
   </div>
-  <div class="post-content">
-    <%= post.contents %>
-  </div>
-</div>
 <% end %>
